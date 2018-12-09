@@ -1,0 +1,14 @@
+version: '3'
+services:
+  mosquittodb:
+    image: mongo:latest
+    environment: 
+      MONGO_INITDB_DATABASE: mosquittodb
+    volumes: 
+     - ./mosquittodb/data:/data/db
+    ports:
+     - 27017:27107
+  mosquitto:
+    build: .
+    ports:
+      - 1883:1883

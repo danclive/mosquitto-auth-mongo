@@ -1,5 +1,7 @@
 FROM ubuntu:18.04
 
+ENV VERSION=0.0.1
+
 RUN apt-get update && apt-get upgrade -y && \
     apt-get install -y \
         cmake \
